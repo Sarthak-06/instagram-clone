@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import './App.css';
 import Post from "./Post";
-//Hi Sarthak Becha!!
+
 function App() {
 
   const [posts,setPosts] = useState([
