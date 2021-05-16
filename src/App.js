@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from 'react';
 import './App.css';
 import Post from "./Post";
 import { db } from "./firebase"
+import ImageUpload from './ImageUpload';
 function App() {
 
   const [posts,setPosts] = useState([
@@ -17,6 +18,14 @@ db.collection('posts').onSnapshot(snapshot =>{
   },[]);
   return (
     <div className="app">
+      {user.displayName?(
+
+     
+      <ImageUpload username={user.displayName}/>
+      ):(
+         <h3>Sorry you need to login again</h3>
+      )
+}
      
      <div className="app__header">
        <img className="app__headerImage"
