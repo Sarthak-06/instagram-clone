@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{ useState } from 'react';
 import './App.css';
 import Post from "./Post";
 
@@ -42,6 +42,11 @@ function App() {
      <Post username="Arya" caption="Apkey yahan be aisa hota hai" imageUrl="https://images.inuth.com/2018/11/feat-img-Gursimran-Khamba-final-Amazon.jpg"/>
      <Post username="Prateek:" caption="Mzaa anaa chaiye" imageUrl="https://th.bing.com/th/id/OIP.3KUHFygi4z6zD6eq2e4IzwHaE8?pid=ImgDet&rs=1"/>
      <h1>Hello</h1>
+     {
+       posts.map(posts =>(
+         <posts username = {posts.username} caption = {posts.caption} imageUrl={posts.imageUrl}/>
+       ))
+     }
 
     </div>
   );
