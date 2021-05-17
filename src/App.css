@@ -6,8 +6,9 @@
  
 }
 .app__header{
+  display: flex;
   background-color: white;
-  
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid lightgray;
@@ -19,5 +20,16 @@
 
 }
 .app__posts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding:20px ;
+}
+.app_loginContainer{
+  display: flex;
+  flex-direction: row;
+}
+.app__headerImage{
+  object-fit: contain;
 }
