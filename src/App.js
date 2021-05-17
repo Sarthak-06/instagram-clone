@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Post from "./Post";
@@ -58,7 +59,7 @@ function App() {
     };
   }, [user, username]);
   useEffect(() => {
-    db.collection("posts").onSnapshot(snapshot => {
+    db.collection("posts").orderBy('timestamp','desc').onSnapshot(snapshot => {
       setPosts(snapshot.docs.map(doc => ({
         id: doc.id,
         post: doc.data(),
@@ -146,7 +147,9 @@ function App() {
             <form className="app__signup">
               <center>
                 <img className="app__headerImage"
-                  src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+
+
+src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
                   alt=""
                 /></center>
 
@@ -190,3 +193,8 @@ function App() {
 }
 
 export default App;
+
+      
+    
+
+ 
