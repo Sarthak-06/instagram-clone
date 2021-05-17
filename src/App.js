@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Post from "./Post";
 
-
 import ImageUpload from './ImageUpload';
-
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import { db ,auth } from "./firebase";
+import { db, auth } from "./firebase";
 import { Button, Input } from '@material-ui/core';
 function getModalStyle() {
   const top = 0;
@@ -38,13 +36,13 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [openSignIn, setOpenSignIn]=useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [openSignIn, setOpenSignIn] = useState(false);
   const [user, setUser] = useState(null);
   useEffect(() => {
-    const unsubscribe=auth.onAuthStateChanged((authUser) => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         console.log(authUser);
         setUser(authUser);
@@ -55,38 +53,40 @@ function App() {
 
       }
 
-    })
-    return()=>{
+    });
+    return () => {
       unsubscribe();
-    }
+    };
   }, [user, username]);
   useEffect(() => {
-    db.collection('posts').onSnapshot(snapshot => {
+    db.collection("posts").onSnapshot(snapshot => {
       setPosts(snapshot.docs.map(doc => ({
         id: doc.id,
-        post: doc.data()
+        post: doc.data(),
       })));
     })
   }, []);
   const signUp = (event) => {
     event.preventDefault();
-    auth.createUserWithEmailAndPassword(email, password)
+    auth
+    .createUserWithEmailAndPassword(email, password)
       .then((authUser) => {
         return authUser.user.updateProfile({
-          displayName: username,
-        })
+          displayName: username, 
+        });
       })
-      .catch((error) => (error.message))
-      setOpen(false);
-  }
-  const signIn =(event)=>{
+      .catch((error) => alert(error.message));
+    setOpen(false);
+  };
+  const signIn = (event) => {
     event.preventDefault();
-    auth.isSignInWithEmailAndPassword(email,password)
-    .catch((error) => (error.message))
+    auth.signInWithEmailAndPassword(email, password)
+      .catch((error) => alert(error.message));
     setOpenSignIn(false);
-  }
+  };
   return (
     <div className="app">
+
 
       {user?.displayName?(
       <ImageUpload username={user.displayName}/>
@@ -185,7 +185,13 @@ function App() {
 
     </div>
     </div>
-  );
+    );
 }
 
 export default App;
+    
+
+      
+    
+
+ 
