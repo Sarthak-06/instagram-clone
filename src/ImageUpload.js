@@ -18,7 +18,7 @@ function ImageUpload({username}) {
 
     const handleUpload = () => {
 
-        const uploadTask = storage.ref('images/${image.name}').put(image);
+        const uploadTask = storage.ref(`images/${image.name}`).put(image);
 
         uploadTask.on(
             "state_changed",
@@ -39,7 +39,7 @@ function ImageUpload({username}) {
                 .getDownloadURL()
                 .then(url =>{
                     db.collection("posts").add({
-                        timestamp: firebase.firestone.FieldValue.serverTimestamp(),
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                         caption: caption,
                         imageUrl:url,
                         username: username
