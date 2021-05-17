@@ -1,7 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Post from "./Post";
-
 import ImageUpload from './ImageUpload';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
@@ -87,109 +87,112 @@ function App() {
   return (
     <div className="app">
 
+      {user?.displayName ? (
 
-      {user?.displayName?(
-      <ImageUpload username={user.displayName}/>
-      ):(
-         <h3>Sorry you need to login again</h3>
+
+        <ImageUpload username={user.displayName} />
+      ) : (
+        <h3>Sorry you need to login again</h3>
       )
-}
-     
-     <div className="app__header">
-       <img className="app__headerImage"
-       src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-       alt=""
-       />
-
-      <Modal
-        open={open}
-        onClose={() => setOpen(false)}
-      >
-        <div style={modalStyle} className={classes.paper}>
-          <form className="app__signup">
-            <center>
-              <img className="app__headerImage"
-                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-                alt=""
-              /></center>
-            <input
-              placeholder="Username"
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-
-            />
-            <input
-              placeholder="email"
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-
-            />
-            <input
-              placeholder="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-
-            />
-            <Button type='submit ' onCLick={signUp}>SignUp</Button>
-          </form>
-        </div>
-      </Modal>
-      <Modal
-        open={openSignIn}
-        onClose={() => setOpenSignIn(false)}
-      >
-        <div style={modalStyle} className={classes.paper}>
-          <form className="app__signup">
-            <center>
-              <img className="app__headerImage"
-                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-                alt=""
-              /></center>
-      
-            <input
-              placeholder="email"
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-
-            />
-            <input
-              placeholder="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-
-            />
-            <Button type='submit ' onCLick={signIn}>SignIn</Button>
-          </form>
-        </div>
-      </Modal>
-      
-
-
-     
-      {user?(<Button onClick={() => auth.signOut()}>Logout</Button>):
-      (<div className="app_loginContainer">
-      <Button onClick={() => setOpen(true)}>SignIn</Button>
-      <Button onClick={() => setOpen(true)}>SignUp</Button>
-     </div>
-     )}
-      {
-        posts.map(({ id, post }) => (
-          <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
-        ))
       }
 
-    </div>
-    </div>
-    );
+      <div className="app__header">
+        <img className="app__headerImage"
+          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+          alt=""
+        />
+
+<Modal
+          open={open}
+          onClose={() => setOpen(false)}
+        >
+          <div style={modalStyle} className={classes.paper}>
+            <form className="app__signup">
+              <center>
+                <img className="app__headerImage"
+                  src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+                  alt=""
+                /></center>
+              <input
+                placeholder="Username"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+
+              />
+              <input
+                placeholder="email"
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+
+              />
+              <input
+                placeholder="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+
+              />
+              <Button type="submit" onClick={signUp}>SignUp</Button>
+            </form>
+          </div>
+        </Modal>
+
+        <Modal
+          open={openSignIn}
+          onClose={() => setOpenSignIn(false)}
+        >
+          <div style={modalStyle} className={classes.paper}>
+            <form className="app__signup">
+              <center>
+                <img className="app__headerImage"
+
+
+src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+                  alt=""
+                /></center>
+
+              <input
+                placeholder="email"
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+
+              />
+              <input
+                placeholder="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+
+              />
+              <Button type="submit" onClick={signIn}>SignIn</Button>
+            </form>
+          </div>
+        </Modal>
+
+
+
+        {user ? (<Button onClick={() => auth.signOut()}>Logout</Button>) :
+          (<div className="app_loginContainer">
+            <Button onClick={() => setOpenSignIn(true)}>SignIn</Button>
+            <Button onClick={() => setOpen(true)}>SignUp</Button>
+          </div>
+        )}</div>
+       <div className="app__posts"> {
+          posts.map(({ id, post }) => (
+            <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
+          ))
+        }
+</div>
+
+      </div>
+    
+  );
 }
 
 export default App;
-    
 
       
     
