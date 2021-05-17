@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Post from "./Post";
 
-i
+
 import ImageUpload from './ImageUpload';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -88,9 +88,7 @@ function App() {
   return (
     <div className="app">
 
-      {user.displayName?(
-
-     
+      {user?.displayName?(
       <ImageUpload username={user.displayName}/>
       ):(
          <h3>Sorry you need to login again</h3>
@@ -106,7 +104,7 @@ function App() {
       <Modal
         open={open}
         onClose={() => setOpen(false)}
-      />
+      >
         <div style={modalStyle} className={classes.paper}>
           <form className="app__signup">
             <center>
@@ -169,14 +167,7 @@ function App() {
           </form>
         </div>
       </Modal>
-      <div className="app__header">
-        <img className="app__headerImage"
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-          alt=""
-        />
-
-
-      </div>
+      
 
 
      
@@ -192,6 +183,7 @@ function App() {
         ))
       }
 
+    </div>
     </div>
   );
 }
