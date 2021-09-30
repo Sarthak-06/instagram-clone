@@ -1,3 +1,10 @@
+#Hey everyone...
+I know this project is very naive. I believe that the main motive of hacktober fest above all is learning and making some meaningful contributions to the society. I made this project with my friend Sarthak just for time pass. But I was wondering if imagine...some day you know...there comes some open source social media application which has a far more superior UI/UX and functionality than facebook/insta/twitter combined. Just imagine how different the world would be! Like literally no ads and no manipulation of data.Just imagine a world without political/social discriminations/feuds/agressions being wiped out. Ultimate privacy to the user. No maniputation of votes or opinions. I think that day might be a dream. But let's just give it a kinda mock try. Please create good PRs and issues if I find the issues interesting I'll surely mark it as a Hacktoberfest issue. Let's see where this naive project reaches throghout the fest.
+Cheers!
+
+
+
+
 # Getting Started with Create React App
 The app has been deployed at https://instagram-clone-8cfc1.web.app
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
