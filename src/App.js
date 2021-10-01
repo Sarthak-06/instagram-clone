@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { db, auth } from "./firebase";
 import InstagramEmbed from 'react-instagram-embed';
-import { Button, Input } from '@material-ui/core';
+import { Button, colors, Input } from '@material-ui/core';
 function getModalStyle() {
   const top = 0;
   const left = 0;
@@ -115,35 +115,35 @@ function App() {
           open={open}
           onClose={() => setOpen(false)}
         >
-          <div style={modalStyle} className={classes.paper}>
+          <div style={{borderRadius:'20px'}} className={classes.paper}>
             <form className="app__signup">
               <center>
                 <img className="app__headerImage"
                   src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
                   alt=""
                 /></center>
-              <input
+              <input style={{padding: '5px',margin: '5px',border:'4px solid grey',borderRadius:'15px'}}
                 placeholder="Username"
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
 
               />
-              <input
+              <input style={{padding: '5px',margin: '5px',border:'4px solid grey',borderRadius:'15px'}}
                 placeholder="email"
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
 
               />
-              <input
+              <input style={{padding: '5px',margin: '5px',border:'4px solid grey',borderRadius:'15px'}}
                 placeholder="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
 
               />
-              <Button type="submit" onClick={signUp}>SignUp</Button>
+              <Button style={{padding: '7px',margin: '20px'}}type="submit" onClick={signUp}>SignUp</Button>
             </form>
           </div>
         </Modal>
@@ -152,8 +152,8 @@ function App() {
           open={openSignIn}
           onClose={() => setOpenSignIn(false)}
         >
-          <div style={modalStyle} className={classes.paper}>
-            <form className="app__signup">
+          <div style={{borderRadius:'20px'}} className={classes.paper}>
+            <form className="app__signup" style={{margin:'5px',padding:'5px'}}>
               <center>
                 <img className="app__headerImage"
 
@@ -162,21 +162,21 @@ src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145
                   alt=""
                 /></center>
 
-              <input
+              <input style={{padding: '5px',margin: '5px',border:'4px solid grey',borderRadius:'15px'}}
                 placeholder="email"
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-
+              
               />
-              <input
+              <input style={{padding: '5px',margin: '5px',border:'4px solid grey',borderRadius:'15px'}}
                 placeholder="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
 
               />
-              <Button type="submit" onClick={signIn}>SignIn</Button>
+              <Button style={{padding: '7px',margin: '20px'}} type="submit" onClick={signIn}>SignIn</Button>
             </form>
           </div>
         </Modal>
@@ -211,5 +211,7 @@ export default App;
 
       
     
+
+ 
 
  
