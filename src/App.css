@@ -1,37 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700;1,800&display=swap");
-* {
+*{
   margin: 0;
 }
-.app {
-  align-items: center;
-  background-color: #fafafa;
+.app{align-items: center;
+  background-color: lightblue;
+ 
 }
-.app__header {
+.app__header{
   display: flex;
-  background-color: white;
+  background-color:darkcyan;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid lightgray;
   object-fit: contain;
-  box-shadow: 10px 5px 5px gray;
 }
-.app__signup {
+.app__signup{
   display: flex;
   flex-direction: column;
+
 }
-.app__posts {
+.app__posts{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding:20px ;
 }
-.app_loginContainer {
+.app_loginContainer{
   display: flex;
   flex-direction: row;
-  font-family: "Montserrat", sans-serif;
 }
-.app__headerImage {
+.app__headerImage{
   object-fit: contain;
 }
