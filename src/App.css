@@ -33,3 +33,7 @@
 .app__headerImage{
   object-fit: contain;
 }
+.header {
+  background: aliceblue;
+}
+
