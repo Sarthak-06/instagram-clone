@@ -38,8 +38,9 @@
 
  margin-top: 10px;
 }
-.post__comment{
-    padding: 20px;
+.post__comments{
+    padding-bottom: 5px;
+    border: 25px
 }
 .post__input{
     flex: 1;

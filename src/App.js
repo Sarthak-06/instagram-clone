@@ -108,7 +108,7 @@ function App() {
       </div>
 
       <Modal open={open} onClose={() => setOpen(false)}>
-        <div style={{ borderRadius: "20px" }} className={classes.paper}>
+        <div style={{ borderRadius: "20px" }} className="munni">
           <form className="app__signup">
             <center>
               <img
@@ -165,7 +165,7 @@ function App() {
       </Modal>
 
       <Modal open={openSignIn} onClose={() => setOpenSignIn(false)}>
-        <div style={{ borderRadius: "20px" }} className={classes.paper}>
+        <div style={{ borderRadius: "20px" }} className="munni">
           <form
             className="app__signup"
             style={{ margin: "5px", padding: "5px" }}
