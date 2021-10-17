@@ -58,7 +58,7 @@ function Post({postId,user,username,caption,imageUrl}) {
             <p class="cmt">
                 Comments...
                 </p>
-            <div className="post__comment">
+            <div className="post__comments">
                 {comments.map((comment)=> (
                     <p>
                         <strong>{comment.username}</strong> {comment.text}
@@ -71,7 +71,7 @@ function Post({postId,user,username,caption,imageUrl}) {
             <input 
             className="post__input"
             type="text"
-            placeholder="Add a comment..."
+            placeholder="Add a commet..."
             value={comment}
             onChange = {(e) => setComment(e.target.value)}
             />

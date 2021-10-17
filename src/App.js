@@ -87,7 +87,7 @@ function App() {
       {user?.displayName ? (
         <ImageUpload username={user.displayName} />
       ) : (
-        <h3 class="header">Sorry you need to login again</h3>
+        <h3></h3>
       )}
 
       <div className="app__header">
@@ -108,7 +108,7 @@ function App() {
       </div>
 
       <Modal open={open} onClose={() => setOpen(false)}>
-        <div style={{ borderRadius: "20px" }} className={classes.paper}>
+        <div style={{ borderRadius: "20px" }} className="munni">
           <form className="app__signup">
             <center>
               <img
@@ -165,7 +165,7 @@ function App() {
       </Modal>
 
       <Modal open={openSignIn} onClose={() => setOpenSignIn(false)}>
-        <div style={{ borderRadius: "20px" }} className={classes.paper}>
+        <div style={{ borderRadius: "20px" }} className="munni">
           <form
             className="app__signup"
             style={{ margin: "5px", padding: "5px" }}
