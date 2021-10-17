@@ -51,8 +51,11 @@ function Post({postId,user,username,caption,imageUrl}) {
 
             </div>
             <img className="post__image" src={imageUrl} alt="" />
+            
             <h4 className="post__text"><strong>{username}</strong>{caption}</h4>
-
+            <p class="cmt">
+                Comments...
+                </p>
             <div className="post__comments">
                 {comments.map((comment)=> (
                     <p>
