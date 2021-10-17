@@ -52,7 +52,9 @@ function Post({postId,user,username,caption,imageUrl}) {
             </div>
             <img className="post__image" src={imageUrl} alt="" />
             
-            <h4 className="post__text"><strong>{username}</strong>{caption}</h4>
+            <h4 className="post__text"><strong>{username}</strong>
+            <p> </p>
+            {caption}</h4>
             <p class="cmt">
                 Comments...
                 </p>
