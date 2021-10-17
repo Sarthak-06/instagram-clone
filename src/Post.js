@@ -66,7 +66,7 @@ function Post({postId,user,username,caption,imageUrl}) {
             <input 
             className="post__input"
             type="text"
-            placeholder="Add a commet..."
+            placeholder="Add a comment..."
             value={comment}
             onChange = {(e) => setComment(e.target.value)}
             />
