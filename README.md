@@ -1,7 +1,7 @@
 #Hacktoberfest Guidelines:
 https://hacktoberfest.digitalocean.com/resources/participation
 Contribute to this repository and please make meaningful contributions. Spam is prohibited. Please read the hacktober fest guidlines. 
-
+New contributors can try their hands on the following repo https://github.com/firstcontributions/first-contributions.
 #How to contribute to hacktoberfest?
 https://www.youtube.com/watch?v=tjH6txTiC6E
 
