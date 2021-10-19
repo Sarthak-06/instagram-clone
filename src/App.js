@@ -131,8 +131,12 @@ function App() {
               style={{
                 padding: "5px",
                 margin: "5px",
-                border: "4px solid grey",
-                borderRadius: "15px",
+                border: "4px solid #3498db",
+                background:"#191919",
+                color:"whitesmoke",
+                textAlign:"center",
+                marginBottom:"10px",
+                borderRadius: "24px",
               }}
               placeholder="Username"
               type="text"
@@ -143,8 +147,12 @@ function App() {
               style={{
                 padding: "5px",
                 margin: "5px",
-                border: "4px solid grey",
-                borderRadius: "15px",
+                border: "4px solid #3498db",
+                background:"#191919",
+                color:"whitesmoke",
+                textAlign:"center",
+                marginBottom:"10px",
+                borderRadius: "24px",
               }}
               placeholder="email"
               type="text"
@@ -155,16 +163,20 @@ function App() {
               style={{
                 padding: "5px",
                 margin: "5px",
-                border: "4px solid grey",
-                borderRadius: "15px",
+                border: "4px solid #3498db",
+                background:"#191919",
+                color:"whitesmoke",
+                textAlign:"center",
+                marginBottom:"10px",
+                borderRadius: "24px",
               }}
               placeholder="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Button
-              style={{ padding: "7px", margin: "20px" }}
+            <Button 
+              style={{ padding: "7px", margin: "20px", border:"4px solid #2ecc71", borderRadius:"24px", color:"whitesmoke" }}
               type="submit"
               onClick={signUp}
             >
