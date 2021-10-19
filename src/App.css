@@ -2,12 +2,13 @@
   margin: 0;
 }
 .app{align-items: center;
-  background-color: lightblue;
+  background-color: #f1f3f6;
  
 }
 .app__header{
+  
   display: flex;
-  background-color:darkcyan;
+  background-color:rgb(204, 236, 236);
   justify-content: space-between;
   align-items: center;
   padding: 15px;
@@ -32,6 +33,8 @@
 }
 .app__headerImage{
   object-fit: contain;
+  height: 50px;
+  width: 50px;
 }
 .header {
   background: aqua;
