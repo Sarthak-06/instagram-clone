@@ -123,7 +123,7 @@ function App() {
             <center>
               <img
                 className="app__headerImage"
-                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+                src="https://applets.imgix.net/https%3A%2F%2Fassets.ifttt.com%2Fimages%2Fchannels%2F28%2Ficons%2Fmonochrome_large.png?w=240&h=240&s=56bb6f6e4569784bab854bf0a0da8bab"
                 alt=""
               />
             </center>
@@ -135,7 +135,7 @@ function App() {
                 background:"#191919",
                 color:"whitesmoke",
                 textAlign:"center",
-                marginBottom:"10px",
+                // marginBottom:"10px",
                 borderRadius: "24px",
               }}
               placeholder="Username"
@@ -151,7 +151,7 @@ function App() {
                 background:"#191919",
                 color:"whitesmoke",
                 textAlign:"center",
-                marginBottom:"10px",
+                
                 borderRadius: "24px",
               }}
               placeholder="email"
@@ -167,7 +167,7 @@ function App() {
                 background:"#191919",
                 color:"whitesmoke",
                 textAlign:"center",
-                marginBottom:"10px",
+                // marginBottom:"10px"
                 borderRadius: "24px",
               }}
               placeholder="password"
@@ -176,7 +176,7 @@ function App() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Button 
-              style={{ padding: "7px", margin: "20px", border:"4px solid #2ecc71", borderRadius:"24px", color:"whitesmoke" }}
+              style={{ padding: "7px", margin: "15px", border:"4px solid #2ecc71", borderRadius:"24px", color:"whitesmoke" }}
               type="submit"
               onClick={signUp}
             >

@@ -34,9 +34,9 @@
 }
 .app__headerImage{
   object-fit: contain;
-  margin-bottom: 10px;
-  height: 50px;
-  width: 50px;
+  
+  height: 30px;
+  width: 30px;
 }
 .header {
   background: aqua;
