@@ -99,9 +99,20 @@ function App() {
           alt=""
         />
         <img
+          className="appheaderimage2"
+          
           // className="app__headerImage"
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
           // src="https://cdn-icons.flaticon.com/png/512/717/premium/717392.png?token=exp=1634676224~hmac=f6f01a0b57dce4a06881422c3f8aa261"
+          
+          alt=""
+        />
+        <img
+          
+          className="app__headerImage1"
+          // src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+          // src="https://cdn-icons.flaticon.com/png/512/717/premium/717392.png?token=exp=1634676224~hmac=f6f01a0b57dce4a06881422c3f8aa261"
+          src="https://cdn-icons-png.flaticon.com/512/748/748015.png"
           
           alt=""
         />
@@ -154,7 +165,7 @@ function App() {
                 
                 borderRadius: "24px",
               }}
-              placeholder="email"
+              placeholder="Email"
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -170,13 +181,13 @@ function App() {
                 // marginBottom:"10px"
                 borderRadius: "24px",
               }}
-              placeholder="password"
+              placeholder="Password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <Button 
-              style={{ padding: "7px", margin: "15px", border:"4px solid #2ecc71", borderRadius:"24px", color:"whitesmoke" }}
+              style={{ padding: "4px", margin: "20px",marginRight:"10px", border:"4px solid #2ecc71", borderRadius:"24px", color:"whitesmoke" }}
               type="submit"
               onClick={signUp}
             >
@@ -210,7 +221,7 @@ function App() {
                 borderRadius: "24px",
                 color:"whitesmoke",
               }}
-              placeholder="email"
+              placeholder="Email"
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -226,7 +237,7 @@ function App() {
                 borderRadius: "24px",
                 color:"whitesmoke",
               }}
-              placeholder="password"
+              placeholder="Password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
