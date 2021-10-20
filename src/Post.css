@@ -1,29 +1,37 @@
 .post{
  
     text-align: center;
-    max-width: 500px;
+    width: 500px;
     background-color: white;
-    border: 1px solid lightgray;
+    border: 1px solid rgb(218, 203, 203);
     margin-bottom: 45px;
 }
 .post__image{
     width: 100%;
     object-fit: contain;
-    border-top:1px solid lightgray;
-    border-bottom:1px solid lightgray;
+    padding-top: 5px;
+    padding-bottom: 2px;
 }
 .post__text
 {
-    font-weight: normal;
-    padding: 20px;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 7px;
+    border-bottom: .1rem solid rgb(184, 182, 182);
+    margin-bottom: .2rem;
+    text-align:left;
+    padding-left: 7px;
 }
 .post__header{
-    position: sticky;
     top: 0;
     z-index: 1;
+    border-bottom: .1px solid ;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    border-top: 2px;
+    border-radius: 2px;
+    border-bottom: .1rem solid rgb(184, 182, 182);
 }
 .post__Avatar{
     margin-right: 10px;
@@ -32,10 +40,14 @@
 .post__commentBox
 {
  display: flex;
+
  margin-top: 10px;
 }
-.post__comment{
-    padding: 20px;
+.post__comments{
+    padding-bottom: 5px;
+    border: 25px;
+    text-align: left;
+    margin-left: 5px;
 }
 .post__input{
     flex: 1;
@@ -43,9 +55,19 @@
     padding: 10px;
     border-top: 1px solid lightgray;
 }
-post__button{
+.post__button{
     flex: 0;
     border: none;
     border-top: 1px solid lightgray;
     color: #6082a3;
+}
+
+.cmt{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(90, 90, 90);
+    text-align: left;
+    margin-bottom: 4px;
+    margin-left: 7px;
 }

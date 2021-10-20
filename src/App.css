@@ -1,37 +1,71 @@
-* {
+*{
   margin: 0;
 }
-.app {
-  align-items: center;
-  background-color: #fafafa;
+.app{align-items: center;
+  background-color: #f1f3f6;
+ 
 }
-.app__header {
+.app__header{
+  
   display: flex;
-  background-color: white;
+  background-color:rgb(204, 236, 236);
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   border-bottom: 1px solid lightgray;
   object-fit: contain;
 }
-.app__signup {
+.app__signup{
   display: flex;
   flex-direction: column;
+  background-color: #191919;
 }
-.app__posts {
+.app__posts{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding:20px;
+  margin-top: 10px;
 }
-.app_loginContainer {
+.app_loginContainer{
   display: flex;
   flex-direction: row;
 }
-.app__headerImage {
+.app__headerImage{
   object-fit: contain;
+  
+  height: 30px;
+  width: 30px;
 }
 .header {
-  background: aliceblue;
+  background: aqua;
 }
+
+.munni{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:35px;
+  padding-bottom: -35px;
+  background-color: #191919;
+  width: fit-content;
+  height: fit-content;
+   position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 150px;
+    height: 180px;
+
+}
+.happy a:hover{
+  background-color: "#2ecc71";
+
+}
+/* .hovering a:hover{
+  background-color: "#2ecc71";
+} */

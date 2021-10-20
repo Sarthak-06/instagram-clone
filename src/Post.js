@@ -44,15 +44,20 @@ function Post({postId,user,username,caption,imageUrl}) {
             <div className="post__header">
             <Avatar
             className="post__Avatar"
-            alt="Sarthak"
-            src="/static/images/avatar/1.jpg"
+            alt="User"
+            src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
             />
             <h3>{username}</h3>
 
             </div>
             <img className="post__image" src={imageUrl} alt="" />
-            <h4 className="post__text"><strong>{username}</strong>{caption}</h4>
-
+            
+            <h4 className="post__text">
+            <p> </p>
+            {caption}</h4>
+            <p class="cmt">
+                Comments...
+                </p>
             <div className="post__comments">
                 {comments.map((comment)=> (
                     <p>
