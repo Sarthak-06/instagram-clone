@@ -26,6 +26,7 @@
 .app__posts{
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
   justify-content: center;
   align-items: center;
   padding:20px;
