@@ -5,9 +5,11 @@ import ImageUpload from "./ImageUpload";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { db, auth } from "./firebase";
+import {firebase} from "./firebase";
 import InstagramEmbed from "react-instagram-embed";
 import { Button, colors, Input } from "@material-ui/core";
 import Icon from "./instagram.png";
+
 function getModalStyle() {
   const top = 0;
   const left = 0;
@@ -83,6 +85,19 @@ function App() {
       .catch((error) => alert(error.message));
     setOpenSignIn(false);
   };
+
+     const signInGoogle=(event)=>{
+       event.preventDefault();
+              var google_provider = new firebase.auth.GoogleAuthProvider();
+              firebase.auth().signInWithPopup(google_provider)
+              .then((re)=>{
+                 console.log(re);
+
+              })
+              .catch((err)=>{
+                console.log(err);
+              })
+            };
   return (
     <div className="app">
       {user?.displayName ? (
@@ -232,6 +247,16 @@ function App() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+         
+               <Button className="happy"
+              style={{ padding: "7px", margin: "20px",color:"#2ecc71",border:"4px solid #2ecc71", borderRadius:"24px", }}
+              
+              type="submit"
+              onClick={signInGoogle}
+            >
+              Sign Up with Google 
+            </Button>
+           
             <Button className="happy"
               style={{ padding: "7px", margin: "20px",color:"#2ecc71",border:"4px solid #2ecc71", borderRadius:"24px", }}
               
