@@ -7,6 +7,7 @@ import Modal from "@material-ui/core/Modal";
 import { db, auth } from "./firebase";
 import InstagramEmbed from "react-instagram-embed";
 import { Button, colors, Input } from "@material-ui/core";
+import Icon from "./instagram.png";
 function getModalStyle() {
   const top = 0;
   const left = 0;
@@ -94,7 +95,7 @@ function App() {
         <img
           className="app__headerImage"
           // src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-          src="https://cdn-icons.flaticon.com/png/512/717/premium/717392.png?token=exp=1634676224~hmac=f6f01a0b57dce4a06881422c3f8aa261"
+          src={Icon}
           
           alt=""
         />
