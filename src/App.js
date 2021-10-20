@@ -5,9 +5,11 @@ import ImageUpload from "./ImageUpload";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { db, auth } from "./firebase";
+import {firebase} from "./firebase";
 import InstagramEmbed from "react-instagram-embed";
 import { Button, colors, Input } from "@material-ui/core";
 import Icon from "./instagram.png";
+
 function getModalStyle() {
   const top = 0;
   const left = 0;
@@ -83,6 +85,19 @@ function App() {
       .catch((error) => alert(error.message));
     setOpenSignIn(false);
   };
+
+     const signInGoogle=(event)=>{
+       event.preventDefault();
+              var google_provider = new firebase.auth.GoogleAuthProvider();
+              firebase.auth().signInWithPopup(google_provider)
+              .then((re)=>{
+                 console.log(re);
+
+              })
+              .catch((err)=>{
+                console.log(err);
+              })
+            };
   return (
     <div className="app">
       {user?.displayName ? (
@@ -100,9 +115,20 @@ function App() {
           alt=""
         />
         <img
+          className="appheaderimage2"
+          
           // className="app__headerImage"
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
           // src="https://cdn-icons.flaticon.com/png/512/717/premium/717392.png?token=exp=1634676224~hmac=f6f01a0b57dce4a06881422c3f8aa261"
+          
+          alt=""
+        />
+        <img
+          
+          className="app__headerImage1"
+          // src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+          // src="https://cdn-icons.flaticon.com/png/512/717/premium/717392.png?token=exp=1634676224~hmac=f6f01a0b57dce4a06881422c3f8aa261"
+          src="https://cdn-icons-png.flaticon.com/512/748/748015.png"
           
           alt=""
         />
@@ -155,7 +181,7 @@ function App() {
                 
                 borderRadius: "24px",
               }}
-              placeholder="email"
+              placeholder="Email"
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -171,13 +197,13 @@ function App() {
                 // marginBottom:"10px"
                 borderRadius: "24px",
               }}
-              placeholder="password"
+              placeholder="Password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <Button 
-              style={{ padding: "7px", margin: "15px", border:"4px solid #2ecc71", borderRadius:"24px", color:"whitesmoke" }}
+              style={{ padding: "4px", margin: "20px",marginRight:"10px", border:"4px solid #2ecc71", borderRadius:"24px", color:"whitesmoke" }}
               type="submit"
               onClick={signUp}
             >
@@ -211,7 +237,7 @@ function App() {
                 borderRadius: "24px",
                 color:"whitesmoke",
               }}
-              placeholder="email"
+              placeholder="Email"
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -227,11 +253,21 @@ function App() {
                 borderRadius: "24px",
                 color:"whitesmoke",
               }}
-              placeholder="password"
+              placeholder="Password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+         
+               <Button className="happy"
+              style={{ padding: "7px", margin: "20px",color:"#2ecc71",border:"4px solid #2ecc71", borderRadius:"24px", }}
+              
+              type="submit"
+              onClick={signInGoogle}
+            >
+              Sign Up with Google 
+            </Button>
+           
             <Button className="happy"
               style={{ padding: "7px", margin: "20px",color:"#2ecc71",border:"4px solid #2ecc71", borderRadius:"24px", }}
               
