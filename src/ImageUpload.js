@@ -61,9 +61,10 @@ function ImageUpload({ username }) {
         onChange={(event) => {
           setCaption(event.target.value);
         }}
+        style={{ width:"300px", height:"19px" }}
       />
       <input type="file" onChange={handleChange} />
-      <Button onClick={handleUpload}>Upload</Button>
+      <Button onClick={handleUpload} style={{width:"30px",height:'33px'}}>Upload</Button>
     </div>
   );
 }
