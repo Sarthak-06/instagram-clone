@@ -14,9 +14,6 @@
   padding: 15px;
   border-bottom: 1px solid lightgray;
   object-fit: contain;
-  position: fixed;
-  width: 100%;
-  top: 0%;
 }
 .app__signup{
   display: flex;
@@ -26,6 +23,7 @@
 .app__posts{
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
   justify-content: center;
   align-items: center;
   padding:20px;
@@ -40,17 +38,6 @@
   
   height: 30px;
   width: 30px;
-}
-.appheaderimage2{
-  object-fit: contain;
-  position: absolute;
-  left: 50%;
-}
-.app__headerImage1{
-  height: 30px;
-  width: 30px;
-  margin-left: 78rem;
-
 }
 .header {
   background: aqua;
@@ -83,14 +70,3 @@
 /* .hovering a:hover{
   background-color: "#2ecc71";
 } */
-
-.homeicon{
-  margin-left: 100px;
-}
-.MuiButton-label {
-  width: 100%;
-  display: inherit;
-  align-items: inherit;
-  justify-content: inherit;
-  margin-right: 23px;
-}
